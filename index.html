@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Calculator</h1>
+      <h3 id="calcTitle">Choose Language</h3>
+      <select id="language">
+        <option value="1">English</option>
+        <option value="2">العربية</option>
+      </select>
+      <button id="nextButton" onclick="showCalculator()" style="display: none">
+        Go to Calculator
+      </button>
+
+      <div id="calcOptions" class="calcOptions">
+        <div class="main">
+          <h2 id="operationTitle">Choose the calculation</h2>
+          <select id="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">×</option>
+            <option value="÷">÷</option>
+          </select>
+          <div class="number">
+            <input
+              type="number"
+              id="firstNumber"
+              placeholder="First number"
+              required
+            />
+            <input
+              type="number"
+              id="secondNumber"
+              placeholder="Second number"
+              required
+            />
+          </div>
+          <button onclick="calculate()" id="btn">Calculate</button>
+          <h3 id="result">Result:</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
